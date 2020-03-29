@@ -8,7 +8,7 @@ The paper "[Attention Based Spatial-Temporal Graph Convolutional Networks for Tr
 
 本篇论文通过以临近、前几日、前几周为周期对于未来时间片的交通流量进行预测。
 
-![image-20200329142010326](https://github.com/Knowledge-Precipitation-Tribe/ASTGCN-pytorch/tree/master/ppt/images/problem_init.png)
+![image-20200329142010326](https://github.com/Knowledge-Precipitation-Tribe/ASTGCN-pytorch/blob/master/ppt/images/problem_init.png)
 
 ## 相关工作
 
