@@ -14,11 +14,11 @@ The paper "[Attention Based Spatial-Temporal Graph Convolutional Networks for Tr
 
 该论文从三个方面进行相关工作的介绍，分别列举了不同方面的前人工作进展。
 
-![T_F](https://github.com/Knowledge-Precipitation-Tribe/ASTGCN-pytorch/tree/master/ppt/images/Traffic_forecasting.png)
+![t-f](https://github.com/Knowledge-Precipitation-Tribe/ASTGCN-pytorch/blob/master/ppt/images/Traffic_forecasting.png)
 
-![C_O_G](https://github.com/Knowledge-Precipitation-Tribe/ASTGCN-pytorch/tree/master/ppt/images/Convolution_on_graph.png)
+![c-o-g](https://github.com/Knowledge-Precipitation-Tribe/ASTGCN-pytorch/blob/master/ppt/images/Convolution_on_graph.png)
 
-![A_M](https://github.com/Knowledge-Precipitation-Tribe/ASTGCN-pytorch/tree/master/ppt/images/Attention_mechanism.png)
+![A-M](https://github.com/Knowledge-Precipitation-Tribe/ASTGCN-pytorch/tree/master/ppt/images/Attention_mechanism.png)
 
 ## 方法与模型结构
 
