@@ -10,7 +10,7 @@ The code of this project is runnable, but the result have some program.It will b
 
 ## Model architecture
 
-![model architecture]()
+![model architecture](https://github.com/Knowledge-Precipitation-Tribe/ASTGCN-pytorch/blob/master/images/model.png)
 
 ## Requirements:
 

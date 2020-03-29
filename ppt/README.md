@@ -8,17 +8,17 @@ The paper "[Attention Based Spatial-Temporal Graph Convolutional Networks for Tr
 
 本篇论文通过以临近、前几日、前几周为周期对于未来时间片的交通流量进行预测。
 
-![image-20200329142010326](C:\Users\14675\Desktop\ASTGCN-pytorch\ppt\images\problem_init.png)
+![image-20200329142010326](https://github.com/Knowledge-Precipitation-Tribe/ASTGCN-pytorch/tree/master/ppt/images/problem_init.png)
 
 ## 相关工作
 
 该论文从三个方面进行相关工作的介绍，分别列举了不同方面的前人工作进展。
 
-![T_F](C:\Users\14675\Desktop\ASTGCN-pytorch\ppt\images\Traffic_forecasting.png)
+![T_F](https://github.com/Knowledge-Precipitation-Tribe/ASTGCN-pytorch/tree/master/ppt/images/Traffic_forecasting.png)
 
-![C_O_G](C:\Users\14675\Desktop\ASTGCN-pytorch\ppt\images\Convolution_on_graph.png)
+![C_O_G](https://github.com/Knowledge-Precipitation-Tribe/ASTGCN-pytorch/tree/master/ppt/images/Convolution_on_graph.png)
 
-![A_M](C:\Users\14675\Desktop\ASTGCN-pytorch\ppt\images\Attention_mechanism.png)
+![A_M](https://github.com/Knowledge-Precipitation-Tribe/ASTGCN-pytorch/tree/master/ppt/images/Attention_mechanism.png)
 
 ## 方法与模型结构
 
@@ -26,13 +26,13 @@ The paper "[Attention Based Spatial-Temporal Graph Convolutional Networks for Tr
 
 将交通网络定义为无向图G = (V, E, A)，如图2(a)所示，其中V为|V | = N个节点的集合;E是一组边，表示节点之间的连通性;A∈R（N\*N）表示图G的邻接矩阵。每个节点检测到F个观测值（速度、流量、时间占有率），代表着该节点的 F个特征，如图2(b)实线所示。本文即利用全网过去T个时间节点的数据（速度、流量和时间占有率）预测未来P个时间点的交通流量，即输入为X∈R（N\*F\*T）, 输出为Y∈R（N\*P），其中N为观测站数据，F=3为每个节点的三个特征，T为输入的T个时间步，P为输出的时间步。
 
-![network](C:\Users\14675\Desktop\ASTGCN-pytorch\ppt\images\network.png)
+![network](https://github.com/Knowledge-Precipitation-Tribe/ASTGCN-pytorch/tree/master/ppt/images/network.png)
 
 ### 框架总览
 
 这里展示了网络的总体结构，并阐述了三个输入的定义。
 
-![Framework overview](C:\Users\14675\Desktop\ASTGCN-pytorch\ppt\images\framework_overview.png)
+![Framework overview](https://github.com/Knowledge-Precipitation-Tribe/ASTGCN-pytorch/tree/master/ppt/images/framework_overview.png)
 
 ### 时空模块 ST block
 
@@ -42,23 +42,23 @@ The paper "[Attention Based Spatial-Temporal Graph Convolutional Networks for Tr
 
 这里对于空间维度和时间维度分别使用了注意力机制去捕捉各维度的关联性。
 
-![SATT](C:\Users\14675\Desktop\ASTGCN-pytorch\ppt\images\satt.png)
+![SATT](https://github.com/Knowledge-Precipitation-Tribe/ASTGCN-pytorch/tree/master/ppt/images/satt.png)
 
-![TATT](C:\Users\14675\Desktop\ASTGCN-pytorch\ppt\images\tatt.png)
+![TATT](https://github.com/Knowledge-Precipitation-Tribe/ASTGCN-pytorch/tree/master/ppt/images/tatt.png)
 
 #### GCN+Conv
 
 在空间维度上使用了图卷积网络进行处理，在时间维度上则使用了标准的卷积网络进行处理。
 
-![GCN](C:\Users\14675\Desktop\ASTGCN-pytorch\ppt\images\gcn.png)
+![GCN](https://github.com/Knowledge-Precipitation-Tribe/ASTGCN-pytorch/tree/master/ppt/images/gcn.png)
 
-![Conv](C:\Users\14675\Desktop\ASTGCN-pytorch\ppt\images\Conv.png)
+![Conv](https://github.com/Knowledge-Precipitation-Tribe/ASTGCN-pytorch/tree/master/ppt/images/Conv.png)
 
 ### 多特征融合
 
 在最后将三个因素得到的输出进行加权融合。
 
-![Fusion](C:\Users\14675\Desktop\ASTGCN-pytorch\ppt\images\fusion.png)
+![Fusion](https://github.com/Knowledge-Precipitation-Tribe/ASTGCN-pytorch/tree/master/ppt/imagesfusion.png)
 
 ## Experiment
 
@@ -76,11 +76,11 @@ The paper "[Attention Based Spatial-Temporal Graph Convolutional Networks for Tr
 
 通过与其他方法的对比，可以看到ASTGCN由于其他模型。并且论文还给出了除去注意力机制的MSTGCN模型，通过对比可以看出加入注意力机制后模型的准确率得到了提升。
 
-![ex](C:\Users\14675\Desktop\ASTGCN-pytorch\ppt\images\ex_picture.png)
+![ex](https://github.com/Knowledge-Precipitation-Tribe/ASTGCN-pytorch/tree/master/ppt/images/ex_picture.png)
 
 并且论文还给出了注意力矩阵，以便于更好的展现注意力机制的应用。
 
-![matrix](C:\Users\14675\Desktop\ASTGCN-pytorch\ppt\images\satt-matrix.png)
+![matrix](https://github.com/Knowledge-Precipitation-Tribe/ASTGCN-pytorch/tree/master/ppt/images/satt-matrix.png)
 
 这里由于代码暂时还有些问题未处理好，所以暂时不展示自己的实验结果，后期会对于仓库进行更新。
 
